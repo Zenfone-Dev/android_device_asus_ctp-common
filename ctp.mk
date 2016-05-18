@@ -161,6 +161,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.redhookbay
 
+# Marshmallow Compatibility Library
+PRODUCT_PACKAGES += \
+	libmmcompat
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.status.polling.enable=0 \

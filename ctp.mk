@@ -33,7 +33,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    libshim_audio \
     libtinycompress \
     libtinyalsa \
     audio.a2dp.default \
@@ -56,7 +55,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     bspcapability \
     camera.redhookbay \
-    libshim_camera \
     Snap
 
 # Charger
@@ -74,8 +72,7 @@ PRODUCT_PACKAGES += \
     pvr_drv_video
 
 # GPS
-PRODUCT_PACKAGES += \
-    libshim_gps
+
 
 PRODUCT_COPY_FILES += \
     device/asus/ctp-common/configs/gps.conf:system/etc/gps.conf \
@@ -164,10 +161,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.redhookbay
 
-# Radio
+# Marshmallow Compatibility Library
 PRODUCT_PACKAGES += \
-    libshim_mmgr \
-    libshim_tcs
+	libmmcompat
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.status.polling.enable=0 \
@@ -209,8 +205,6 @@ PRODUCT_PACKAGES += \
     init.wireless.rc
 
 # Sensors
-PRODUCT_PACKAGES += \
-    libshim_sensors
 
 PRODUCT_COPY_FILES += \
     device/asus/ctp-common/configs/sensor_hal_config_default.xml:system/etc/sensor_hal_config_default.xml
